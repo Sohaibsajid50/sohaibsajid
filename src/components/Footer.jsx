@@ -1,48 +1,38 @@
-import { Github, Twitter, Mail } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+
+const SOCIALS = [
+  { href: 'https://github.com/sohaibsajid', label: 'GitHub', icon: Github },
+  { href: 'https://twitter.com/sohaibsajid', label: 'X / Twitter', icon: Twitter },
+  { href: 'https://linkedin.com/in/sohaibsajid', label: 'LinkedIn', icon: Linkedin },
+  { href: 'mailto:sohaib[at]sohaibsajid.com', label: 'Email', icon: Mail },
+];
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200">
-      <div className="container-main">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div>
-            <p className="text-sm text-gray-600">
-              Built with React, Tailwind, and caffeine.
-            </p>
-            <p className="text-xs text-gray-500 mt-2">
-              © 2024 Sohaib. All rights reserved.
-            </p>
-          </div>
+    <footer
+      className="border-t text-center py-10 px-6"
+      style={{ borderColor: 'var(--color-border)' }}
+    >
+      <p className="text-sm text-gray-500 mb-4">
+        Building autonomous systems, one agent at a time.
+      </p>
 
-          <div className="flex gap-6">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-black transition-colors"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-black transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter size={20} />
-            </a>
-            <a
-              href="mailto:hello@sohaib.com"
-              className="text-gray-600 hover:text-black transition-colors"
-              aria-label="Email"
-            >
-              <Mail size={20} />
-            </a>
-          </div>
-        </div>
+      <div className="flex justify-center gap-5 mb-5">
+        {SOCIALS.map(({ href, label, icon: Icon }) => (
+          <a
+            key={href}
+            href={href}
+            target={href.startsWith('mailto') ? undefined : '_blank'}
+            rel="noopener noreferrer"
+            aria-label={label}
+            className="text-gray-400 hover:text-gray-700 transition-colors"
+          >
+            <Icon size={17} />
+          </a>
+        ))}
       </div>
+
+      <p className="text-xs text-gray-400">© 2025 Sohaib. All rights reserved.</p>
     </footer>
   );
 }
