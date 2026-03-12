@@ -21,11 +21,11 @@
 
 ### About Page
 
-- [ ] **ABOUT-01**: About page displays bio paragraph (3rd-person copyable bio)
-- [ ] **ABOUT-02**: About page displays profile photo
-- [ ] **ABOUT-03**: About page has "Current Goals" / OKR section with accordion toggle per quarter
-- [ ] **ABOUT-04**: About page has "Year in Review" stats section (runs, pushups, books read, people met, etc.)
-- [ ] **ABOUT-05**: About page has "Organizations / Communities" list with linked badges
+- [x] **ABOUT-01**: About page displays bio paragraph (3rd-person copyable bio)
+- [x] **ABOUT-02**: About page displays profile photo
+- [x] **ABOUT-03**: About page has "Current Goals" / OKR section with accordion toggle per quarter
+- [x] **ABOUT-04**: About page has "Year in Review" stats section (runs, pushups, books read, people met, etc.)
+- [x] **ABOUT-05**: About page has "Organizations / Communities" list with linked badges
 
 ### Projects Page
 
