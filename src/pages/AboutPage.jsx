@@ -4,6 +4,14 @@ import { Footer } from '../components/Footer';
 import { GoalsSection } from '../components/GoalsSection';
 import { YearReviewSection } from '../components/YearReviewSection';
 
+// ─── Photos ───────────────────────────────────────────────────────────────────
+// To add your cover photo:  place the file in src/assets/ then change null to:
+//   import coverImg from '../assets/cover.jpg'   and set COVER_PHOTO = coverImg
+// To add your profile photo: same pattern with profile.jpg → PROFILE_PHOTO
+const COVER_PHOTO = null;   // null = show placeholder banner
+const PROFILE_PHOTO = null; // null = show initials circle
+// ─────────────────────────────────────────────────────────────────────────────
+
 const BIO =
   'Sohaib is a builder focused on autonomous systems and AI agents. He designs software that delegates real business problems to digital employees—systems that learn, adapt, and operate independently. He works at the intersection of LLM tooling, product engineering, and the economics of automation.';
 
@@ -40,14 +48,41 @@ export function AboutPage() {
           <h1>About</h1>
         </header>
 
-        {/* Bio + photo block */}
-        <div className="reveal mb-8" style={{ transitionDelay: '60ms' }}>
+        {/* Cover photo banner */}
+        <div className="reveal mb-6" style={{ transitionDelay: '60ms' }}>
+          {COVER_PHOTO ? (
+            <img
+              src={COVER_PHOTO}
+              alt="Cover"
+              className="w-full rounded-lg object-cover"
+              style={{ height: '200px' }}
+            />
+          ) : (
+            <div
+              className="w-full rounded-lg bg-gray-100 flex items-center justify-center"
+              style={{ height: '200px' }}
+            >
+              <span className="text-gray-300 text-sm">cover photo</span>
+            </div>
+          )}
+        </div>
+
+        {/* Profile photo + bio block */}
+        <div className="reveal mb-8" style={{ transitionDelay: '120ms' }}>
           <div className="flex gap-6 items-start">
-            {/* Initials placeholder */}
+            {/* Profile photo */}
             <div className="flex-shrink-0 flex flex-col items-center gap-2">
-              <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500 font-semibold text-lg">SS</span>
-              </div>
+              {PROFILE_PHOTO ? (
+                <img
+                  src={PROFILE_PHOTO}
+                  alt="Sohaib Sajid"
+                  className="w-24 h-24 rounded-full object-cover"
+                />
+              ) : (
+                <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center">
+                  <span className="text-gray-400 font-semibold text-xl">SS</span>
+                </div>
+              )}
               <span className="text-xs text-gray-400">sohaib@sohaibsajid.com</span>
             </div>
             {/* Bio text + copy button */}
@@ -65,7 +100,7 @@ export function AboutPage() {
         </div>
 
         {/* Contact */}
-        <div className="reveal mb-8" style={{ transitionDelay: '120ms' }}>
+        <div className="reveal mb-8" style={{ transitionDelay: '180ms' }}>
           <h2 className="text-lg font-semibold mb-1">Get in touch</h2>
           <p className="text-sm text-gray-600 mb-2">
             sohaib[at]sohaibsajid.com

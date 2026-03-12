@@ -29,10 +29,10 @@
 
 ### Projects Page
 
-- [ ] **PROJ-01**: Each project entry shows date in MM.YYYY format
-- [ ] **PROJ-02**: Each project entry has icon links for GitHub (💻), video (🎥), article (✍️), photo (📷) where applicable
-- [ ] **PROJ-03**: Projects listed in reverse chronological order (newest first)
-- [ ] **PROJ-04**: At least 5 real placeholder projects with descriptions populated
+- [x] **PROJ-01**: Each project entry shows date in MM.YYYY format
+- [x] **PROJ-02**: Each project entry has icon links for GitHub (💻), video (🎥), article (✍️), photo (📷) where applicable
+- [x] **PROJ-03**: Projects listed in reverse chronological order (newest first)
+- [x] **PROJ-04**: At least 5 real placeholder projects with descriptions populated
 
 ### Writing Page
 
