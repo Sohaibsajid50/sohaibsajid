@@ -12,7 +12,7 @@ Four phases transform a stub portfolio into a fully navigable, content-rich pers
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundations** - Shared infrastructure, route constants, data layer, and sidebar polish
+- [x] **Phase 1: Foundations** - Shared infrastructure, route constants, data layer, and sidebar polish (completed 2026-03-12)
 - [ ] **Phase 2: Identity & Projects** - Full About page and polished Projects page
 - [ ] **Phase 3: Content Library** - Writing, Books, and Experiments pages with filter support
 - [ ] **Phase 4: Sidequests** - Hub page plus dedicated sub-pages for each sidequest
@@ -44,7 +44,11 @@ Plans:
   2. About page has a "Current Goals" section with accordion toggles per quarter
   3. About page has a "Year in Review" stats section with at least one stat visible
   4. Projects page lists at least 5 projects in reverse chronological order, each showing a MM.YYYY date, a description, and applicable icon links (GitHub, video, article)
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — About page (bio+photo layout, Goals accordion, Year in Review stats, Organizations badges)
+- [ ] 02-02-PLAN.md — Projects page (icon links per entry, 5+ projects, reverse-chron data shape)
 
 ### Phase 3: Content Library
 **Goal**: Visitors can browse all written work and explore books and experiments through dedicated, filterable pages
@@ -74,7 +78,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundations | 1/2 | In Progress|  |
-| 2. Identity & Projects | 0/TBD | Not started | - |
+| 1. Foundations | 2/2 | Complete   | 2026-03-12 |
+| 2. Identity & Projects | 0/2 | Not started | - |
 | 3. Content Library | 0/TBD | Not started | - |
 | 4. Sidequests | 0/TBD | Not started | - |

@@ -14,10 +14,10 @@
 
 ### Sidebar & Navigation
 
-- [ ] **NAV-01**: Sidebar brand name updated to "Sohaib Sajid"
-- [ ] **NAV-02**: Instagram added to sidebar social links (alongside X, GitHub, LinkedIn, Email)
-- [ ] **NAV-03**: Broken `mailto:` link in sidebar fixed (currently `sohaib[at]sohaibsajid.com` is not a valid href)
-- [ ] **NAV-04**: NAV_ITEMS updated to reflect new pages: About, Projects, Writing, Books, Experiments, Sidequests
+- [x] **NAV-01**: Sidebar brand name updated to "Sohaib Sajid"
+- [x] **NAV-02**: Instagram added to sidebar social links (alongside X, GitHub, LinkedIn, Email)
+- [x] **NAV-03**: Broken `mailto:` link in sidebar fixed (currently `sohaib[at]sohaibsajid.com` is not a valid href)
+- [x] **NAV-04**: NAV_ITEMS updated to reflect new pages: About, Projects, Writing, Books, Experiments, Sidequests
 
 ### About Page
 
