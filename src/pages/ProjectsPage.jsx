@@ -1,7 +1,17 @@
+import { Github, Video, FileText, Camera } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Footer } from '../components/Footer';
 
 const PROJECTS = [
+  {
+    name: 'Voice AI Customer Support Agent',
+    category: 'Product',
+    description:
+      'Conversational voice agent for inbound customer queries — integrates with Vapi, handles tier-1 support without human escalation, and escalates complex issues with full context.',
+    date: '03.2024',
+    tags: ['Vapi', 'Claude API', 'Node.js', 'Twilio'],
+    links: { github: null, video: null, article: null, photo: null },
+  },
   {
     name: 'Autonomous Agent Framework',
     category: 'Infrastructure',
@@ -9,7 +19,7 @@ const PROJECTS = [
       'Turnkey AI agent system that handles email triage, scheduling, and task delegation. Built around a persistent memory layer and tool-use primitives.',
     date: '01.2024',
     tags: ['Python', 'LLM', 'FastAPI', 'PostgreSQL'],
-    featured: true,
+    links: { github: 'https://github.com/AgentoSync/agent-framework', video: null, article: null, photo: null },
   },
   {
     name: 'Workflow Automation Engine',
@@ -18,7 +28,7 @@ const PROJECTS = [
       'No-code builder for enterprise automation with a visual workflow designer and webhook-first execution model.',
     date: '09.2023',
     tags: ['React', 'Node.js', 'GraphQL', 'AWS Lambda'],
-    featured: true,
+    links: { github: null, video: null, article: null, photo: null },
   },
   {
     name: 'AI-Powered CRM Assistant',
@@ -27,7 +37,7 @@ const PROJECTS = [
       'Autonomous agent that manages customer relationships and sales follow-up cadences, integrated into existing CRM data.',
     date: '06.2023',
     tags: ['TypeScript', 'Claude API', 'Supabase'],
-    featured: false,
+    links: { github: null, video: null, article: null, photo: null },
   },
   {
     name: 'Data Pipeline Orchestrator',
@@ -36,7 +46,7 @@ const PROJECTS = [
       'Intelligent ETL orchestration with self-healing capabilities—detects schema drift, retries partial failures, and alerts on anomalies.',
     date: '03.2023',
     tags: ['Python', 'Airflow', 'Kafka'],
-    featured: false,
+    links: { github: null, video: null, article: null, photo: null },
   },
 ];
 
@@ -57,13 +67,6 @@ export function ProjectsPage() {
           <p>Things I've built that actually run.</p>
         </header>
 
-        {/* Featured label */}
-        <div className="reveal mb-2" style={{ transitionDelay: '60ms' }}>
-          <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-            ● Featured Projects
-          </span>
-        </div>
-
         <div>
           {PROJECTS.map((project, i) => (
             <div
@@ -80,11 +83,6 @@ export function ProjectsPage() {
                     title={project.category}
                   />
                   <span className="font-semibold text-gray-900">{project.name}</span>
-                  {project.featured && (
-                    <span className="tag ml-1" style={{ fontSize: '0.65rem' }}>
-                      featured
-                    </span>
-                  )}
                 </div>
                 <p className="text-sm text-gray-600 mb-2 leading-relaxed">
                   {project.description}
@@ -98,9 +96,55 @@ export function ProjectsPage() {
                 </div>
               </div>
 
-              {/* Right: date */}
-              <div className="flex-shrink-0 text-sm text-gray-400 font-mono pt-1">
-                {project.date}
+              {/* Right: date + icon links */}
+              <div className="flex-shrink-0 flex flex-col items-end gap-1 pt-1">
+                <span className="text-sm text-gray-400 font-mono">{project.date}</span>
+                <div className="flex gap-2">
+                  {project.links.github && (
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                      className="text-gray-400 hover:text-gray-700 transition-colors"
+                    >
+                      <Github size={14} />
+                    </a>
+                  )}
+                  {project.links.video && (
+                    <a
+                      href={project.links.video}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Video"
+                      className="text-gray-400 hover:text-gray-700 transition-colors"
+                    >
+                      <Video size={14} />
+                    </a>
+                  )}
+                  {project.links.article && (
+                    <a
+                      href={project.links.article}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Article"
+                      className="text-gray-400 hover:text-gray-700 transition-colors"
+                    >
+                      <FileText size={14} />
+                    </a>
+                  )}
+                  {project.links.photo && (
+                    <a
+                      href={project.links.photo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Photo"
+                      className="text-gray-400 hover:text-gray-700 transition-colors"
+                    >
+                      <Camera size={14} />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
