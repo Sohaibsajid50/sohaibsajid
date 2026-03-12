@@ -7,7 +7,11 @@ import { EssaysPage } from './pages/EssaysPage';
 import { EssayStubPage } from './pages/EssayStubPage';
 import { SidequestsPage } from './pages/SidequestsPage';
 import { NowPage } from './pages/NowPage';
+import { WritingPage } from './pages/WritingPage';
+import { BooksPage } from './pages/BooksPage';
+import { ExperimentsPage } from './pages/ExperimentsPage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { ROUTES } from './constants/routes';
 
 import './index.css';
 
@@ -15,13 +19,16 @@ export default function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/essays" element={<EssaysPage />} />
-        <Route path="/essays/:slug" element={<EssayStubPage />} />
-        <Route path="/sidequests" element={<SidequestsPage />} />
-        <Route path="/now" element={<NowPage />} />
+        <Route path={ROUTES.HOME} element={<HomePage />} />
+        <Route path={ROUTES.ABOUT} element={<AboutPage />} />
+        <Route path={ROUTES.PROJECTS} element={<ProjectsPage />} />
+        <Route path={ROUTES.ESSAYS} element={<EssaysPage />} />
+        <Route path={ROUTES.ESSAYS_SLUG} element={<EssayStubPage />} />
+        <Route path={ROUTES.SIDEQUESTS} element={<SidequestsPage />} />
+        <Route path={ROUTES.NOW} element={<NowPage />} />
+        <Route path={ROUTES.WRITING} element={<WritingPage />} />
+        <Route path={ROUTES.BOOKS} element={<BooksPage />} />
+        <Route path={ROUTES.EXPERIMENTS} element={<ExperimentsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Layout>
