@@ -1,19 +1,22 @@
 import { NavLink, Link } from 'react-router-dom';
-import { Github, Twitter, Linkedin, Mail, X } from 'lucide-react';
+import { Github, Twitter, Instagram, Linkedin, Mail, X } from 'lucide-react';
+import { ROUTES } from '../constants/routes';
 
 const NAV_ITEMS = [
-  { label: 'About', to: '/about' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'Essays', to: '/essays' },
-  { label: 'Sidequests', to: '/sidequests' },
-  { label: 'Now', to: '/now' },
+  { label: 'About', to: ROUTES.ABOUT },
+  { label: 'Projects', to: ROUTES.PROJECTS },
+  { label: 'Writing', to: ROUTES.WRITING },
+  { label: 'Books', to: ROUTES.BOOKS },
+  { label: 'Experiments', to: ROUTES.EXPERIMENTS },
+  { label: 'Sidequests', to: ROUTES.SIDEQUESTS },
 ];
 
 const SOCIALS = [
   { href: 'https://github.com/sohaibsajid', label: 'GitHub', icon: Github },
   { href: 'https://twitter.com/sohaibsajid', label: 'X / Twitter', icon: Twitter },
+  { href: 'https://instagram.com/sohaib_sajid1', label: 'Instagram', icon: Instagram },
   { href: 'https://linkedin.com/in/sohaibsajid', label: 'LinkedIn', icon: Linkedin },
-  { href: 'mailto:sohaib[at]sohaibsajid.com', label: 'Email', icon: Mail },
+  { href: 'mailto:sohaib@sohaibsajid.com', label: 'Email', icon: Mail },
 ];
 
 export function Sidebar({ open, onClose }) {
@@ -43,7 +46,7 @@ export function Sidebar({ open, onClose }) {
           className="block mb-8 font-heading font-bold text-xl tracking-tight text-gray-900 hover:text-gray-600 transition-colors"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
-          Sohaib
+          Sohaib Sajid
         </Link>
 
         {/* Nav links */}
