@@ -13,7 +13,7 @@ Four phases transform a stub portfolio into a fully navigable, content-rich pers
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundations** - Shared infrastructure, route constants, data layer, and sidebar polish (completed 2026-03-12)
-- [ ] **Phase 2: Identity & Projects** - Full About page and polished Projects page
+- [x] **Phase 2: Identity & Projects** - Full About page and polished Projects page (completed 2026-03-23)
 - [ ] **Phase 3: Content Library** - Writing, Books, and Experiments pages with filter support
 - [ ] **Phase 4: Sidequests** - Hub page plus dedicated sub-pages for each sidequest
 
@@ -79,6 +79,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundations | 2/2 | Complete   | 2026-03-12 |
-| 2. Identity & Projects | 1/2 | In Progress|  |
+| 2. Identity & Projects | 2/2 | Complete   | 2026-03-23 |
 | 3. Content Library | 0/TBD | Not started | - |
 | 4. Sidequests | 0/TBD | Not started | - |

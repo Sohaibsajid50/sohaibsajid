@@ -4,6 +4,42 @@ import { Footer } from '../components/Footer';
 
 const PROJECTS = [
   {
+    name: 'Heart Disease Risk Prediction Engine',
+    category: 'ML',
+    description:
+      'Interpretable ML pipeline for a health tech startup — 8,000 patient records, 14 clinical features (age, BMI, blood pressure, cholesterol). Full EDA, one-hot encoding, and Decision Tree classification with grid search over 180 hyperparameter combos. Delivered tree diagrams for clinical review with documented FN/FP cost tradeoffs. 96.4% test accuracy.',
+    date: '11.2023',
+    tags: ['Python', 'scikit-learn', 'pandas', 'NumPy', 'matplotlib'],
+    links: { github: 'https://github.com/Sohaibsajid50/sohaibsajid50-ml/tree/main/heart-disease-risk-prediction', video: null, article: null, photo: null },
+  },
+  {
+    name: 'Responsible AI Health Classifier',
+    category: 'ML',
+    description:
+      'Logistic regression from scratch (full GD + SGD) for a healthcare analytics team — then ran a complete fairness audit. Stratified confusion matrices by gender revealed a 6.7pp false negative rate gap. Calibrated separate decision thresholds per gender to enforce 80% equal sensitivity. ROC/AUC analysis per subgroup delivered as client documentation.',
+    date: '01.2024',
+    tags: ['Python', 'scikit-learn', 'Fairness AI', 'NumPy', 'pandas'],
+    links: { github: 'https://github.com/Sohaibsajid50/sohaibsajid50-ml/tree/main/responsible-ai-health-classifier', video: null, article: null, photo: null },
+  },
+  {
+    name: 'AI Music Generation Engine',
+    category: 'ML',
+    description:
+      '2-layer MLP built entirely from scratch in NumPy for a creative tech client — no ML frameworks. Trained on Chopin MIDI data with one-hot encoded note sequences, generating original compositions one note at a time via a 20-note context window. Vectorized forward pass + backprop, softmax output, autoregressive sampling. Delivered architecture tradeoff analysis: MLP → RNN → Transformer.',
+    date: '03.2024',
+    tags: ['Python', 'NumPy', 'Neural Networks', 'Generative AI', 'mido'],
+    links: { github: 'https://github.com/Sohaibsajid50/sohaibsajid50-ml/tree/main/ai-music-generation', video: null, article: null, photo: null },
+  },
+  {
+    name: 'Customer Review Sentiment Classifier',
+    category: 'ML',
+    description:
+      'NLP pipeline for an e-commerce platform drowning in manual review triage. Bag-of-words across 16,000 reviews, Naive Bayes with MAP smoothing for unseen words, log-sum trick for numerical stability. Benchmarked against Logistic Regression — matched at 78.7% val accuracy. Delivered word-level feature importance showing exact drivers of negative sentiment.',
+    date: '02.2024',
+    tags: ['Python', 'NumPy', 'scikit-learn', 'NLP'],
+    links: { github: 'https://github.com/Sohaibsajid50/sohaibsajid50-ml/tree/main/customer-review-sentiment', video: null, article: null, photo: null },
+  },
+  {
     name: 'Voice AI Customer Support Agent',
     category: 'Product',
     description:
@@ -54,6 +90,7 @@ const DOT_COLORS = {
   Infrastructure: '#ef4444',
   Tooling: '#3b82f6',
   Product: '#10b981',
+  ML: '#8b5cf6',
 };
 
 export function ProjectsPage() {
